@@ -1,0 +1,41 @@
+//Derivative
+testDri = ParamTrigger("Test Derivative","Send");
+
+if(testDri){
+	accountNo_Deri = "settrade-D";
+	pin = "000000";
+	investPlaceOrder = Settrade_Investor_DV_placeOrder( 
+						accountNo_Deri, 
+						"S50M22", 
+						"SHORT", 
+						"AUTO", 
+						"LIMIT", 
+						"GOOD_TILL_DAY", 
+						"", 
+						"", 
+						"", 
+						pin, 
+						"990", 
+						"0", 
+						1 );
+}
+
+//Equity
+testEquity = ParamTrigger("Test Equity","Send");
+
+if(testEquity){
+	accountNo_Equity = "settrade-E";
+	pin = "000000";
+	investPlaceOrder  =  Settrade_Investor_EQ_placeOrder(
+                            accountNo_Equity,
+                            "PTT",
+                            "BUY",
+                            "LIMIT",
+                            "DAY",
+                            "LOCAL",
+                            "false",
+                            "000000",
+                            "40",
+                            500,
+                            0);
+}
